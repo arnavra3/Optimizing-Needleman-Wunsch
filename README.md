@@ -63,7 +63,7 @@ In **column.cpp**, we implement the Needleman–Wunsch DP matrix fill using **co
   0.865 GIPS (Giga Integer Operations Per Second)
 
 You can view the full source code here:  
-[📄column.cpp](./column.cpp)
+[📄column.cpp](./optimizations/column.cpp)
 
 ## Program 2: Row‑Major Traversal Benchmark
 
@@ -76,7 +76,7 @@ In **row.cpp**, we implement the Needleman–Wunsch DP matrix fill using **row�
   2.862 GIPS  
 
 You can view the full source and build instructions here:  
-[📄 row.cpp](./row.cpp)
+[📄 row.cpp](./optimizations/row.cpp)
 
 ## Program 3: Anti‑Diagonal Traversal Benchmark
 
@@ -92,7 +92,7 @@ In **Anti-Diagonal.cpp**, we compute the scoring matrix by iterating along anti�
 
 
 You can view the full source here:  
-[📄 Anti-Diagonal.cpp](./Anti-Diagonal.cpp)
+[📄 Anti-Diagonal.cpp](./optimizations/Anti-Diagonal.cpp)
 
 ## Program 4: Parallelized Anti‑Diagonal + Loop Unrolling
 
@@ -107,7 +107,7 @@ In **unroll.cpp**, we parallelized the anti‑diagonal traversal (since elements
 - **Using `#pragma unroll` for** inner‑loop unrolling to increase instruction‑level parallelism.
 
 You can view the full source here:  
-[📄 unroll.cpp](./unroll.cpp)
+[📄 unroll.cpp](./optimizations/unroll.cpp)
 
 ## Program 5: Tiled Matrix Traversal
 
@@ -122,7 +122,7 @@ In **tiling.cpp**, we explored tiling the DP matrix to improve spatial locality,
   1.714 GIPS  
 
 You can view the full source here:  
-[📄 tiling.cpp](./tiling.cpp)
+[📄 tiling.cpp](./optimizations/tiling.cpp)
 
 ### Program 6: Parallelized Anti‑Diagonal Within Tiles
 
@@ -134,7 +134,7 @@ In **Anti-DiagonalTiling.cpp**, we apply the anti‑diagonal computation **insid
 - **Throughput**  
   1.652 GIPS  
 
-[📄 Anti-DiagonalTiling.cpp](./Anti-DiagonalTiling.cpp)
+[📄 Anti-DiagonalTiling.cpp](./optimizations/Anti-DiagonalTiling.cpp)
 
 ### Program 7: Anti‑Diagonal Across Tiles
 
@@ -148,7 +148,7 @@ In **AntiDiagonalTiles.cpp**, we apply anti‑diagonal computation at the tile l
   - 5.358 GIPS
   - 9.302 GIPS 
 
-[📄 AntiDiagonalTiles.cpp](./AntiDiagonalTiles.cpp)
+[📄 AntiDiagonalTiles.cpp](./optimizations/AntiDiagonalTiles.cpp)
 
 ### Program 8: Nested Parallel Anti‑Diagonal
 
@@ -160,7 +160,7 @@ In **AntiDiagonalTilesNested.cpp**, we apply the anti‑diagonal approach both *
 - **Throughput**  
   3.704 GIPS  
 
-[📄 AntiDiagonalTilesNested.cpp](./AntiDiagonalTilesNested.cpp)
+[📄 AntiDiagonalTilesNested.cpp](./optimizations/AntiDiagonalTilesNested.cpp)
 
 
 ---
